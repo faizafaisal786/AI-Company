@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p \"C:\\\\Users\\\\HDD BANK\\\\Desktop\\\\AI Multi-Agent Company\")",
+      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --no-src-dir --import-alias \"@/*\" --yes)",
+      "Bash(mkdir -p \"C:\\\\Users\\\\HDD BANK\\\\Desktop\\\\AI Multi-Agent Company\\\\ai-company\")",
+      "Bash(npm install:*)",
+      "Bash(npx tsc:*)",
+      "Bash(npm run:*)"
+    ]
+  }
+}

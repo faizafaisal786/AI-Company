@@ -1,10 +1,6 @@
 import Groq from "groq-sdk";
 import { NextRequest } from "next/server";
 
-const client = new Groq({
-  apiKey: process.env.GROQ_API_KEY,
-});
-
 const AGENTS = {
   ceo: {
     name: "CEO Agent",
@@ -88,6 +84,9 @@ export async function POST(req: NextRequest) {
   const stream = new ReadableStream({
     async start(controller) {
       try {
+        const client = new Groq({
+          apiKey: process.env.GROQ_API_KEY,
+        });
         const response = await client.chat.completions.create({
           model: "llama-3.3-70b-versatile",
           max_tokens: 1024,
